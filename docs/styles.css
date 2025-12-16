@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.wrapper {
+    position: relative;
+    width: 420px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    padding: 20px 45px 20px 20px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus {
+    border-color: rgba(138, 43, 226, 0.8);
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+}
+
+.input-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: white;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 30px 0;
+    color: white;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.options input[type="checkbox"] {
+    accent-color: blueviolet;
+    width: 16px;
+    height: 16px;
+}
+
+.submit-btn {
+    width: 100%;
+    height: 45px;
+    background: blueviolet;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #8a2be2;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+}
+
+.switch-link {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.switch-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 14.5px;
+    transition: all 0.3s ease;
+}
+
+.switch-link a:hover {
+    color: #8a2be2;
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .wrapper {
+        width: 90%;
+        padding: 30px 20px;
+    }
+    
+    .wrapper h1 {
+        font-size: 28px;
+    }
+}
+/* Add these styles to your existing CSS file */
+
+.message {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.success-page {
+    text-align: center;
+    color: white;
+}
+
+.success-page h1 {
+    margin-bottom: 30px;
+    color: #8a2be2;
+}
+
+.user-info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(5px);
+}
+
+.user-details {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+.user-details p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.user-details i {
+    font-size: 20px;
+    color: #8a2be2;
+}
+
+#logoutBtn {
+    background: #ff6b6b;
+    width: 200px;
+}
+
+#logoutBtn:hover {
+    background: #ff5252;
+}
