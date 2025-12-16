@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obsidian Pages</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="./images/Minecraft.mp4" type="video/mp4">
+    </video>
+    
+    <div class="wrapper">
+        <form class="login-form" id="loginForm">
+            <h1>Login</h1>
+            <div id="message" class="message"></div>
+            <div class="input-box">
+                <input type="text" id="loginUsername" placeholder="Username" required> 
+                <i class='bx bx-user'></i> 
+            </div>
+            <div class="input-box">
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <i class='bx bx-lock-keyhole'></i> 
+            </div>
+            <div class="options">
+                <label><input type="checkbox" id="rememberMe"> Remember me</label>
+            </div>
+            <button type="submit" class="submit-btn">Login</button>
+            <div class="switch-link">
+                <a href="#" id="showRegister">Don't have an account?</a>
+            </div>
+        </form>
+
+        <!-- Register Form -->
+        <form class="register-form" id="registerForm" style="display: none;">
+            <h1>Sign Up</h1>
+            <div id="registerMessage" class="message"></div>
+            <div class="input-box">
+                <input type="text" id="regUsername" placeholder="Username" required> 
+                <i class='bx bx-user'></i> 
+            </div>
+            <div class="input-box">
+                <input type="email" id="regEmail" placeholder="Email" required>
+                <i class='bx bx-envelope'></i> 
+            </div>
+            <div class="input-box">
+                <input type="password" id="regPassword" placeholder="Password" required>
+                <i class='bx bx-lock-keyhole'></i> 
+            </div>
+            <div class="input-box">
+                <input type="password" id="regConfirmPassword" placeholder="Confirm Password" required>
+                <i class='bx bx-lock-keyhole'></i> 
+            </div>
+            <button type="submit" class="submit-btn">Register</button>
+            <div class="switch-link">
+                <a href="#" id="showLogin">Already have an account?</a>
+            </div>
+        </form>
+        
+        <!-- Success Page (Hidden) -->
+        <div class="success-page" id="successPage" style="display: none;">
+            <h1>Welcome to Obsidian Pages! 🎉</h1>
+            <div class="user-info">
+                <p id="welcomeMessage"></p>
+                <div class="user-details">
+                    <p><i class='bx bx-user'></i> <span id="displayUsername"></span></p>
+                    <p><i class='bx bx-envelope'></i> <span id="displayEmail"></span></p>
+                </div>
+            </div>
+            <button class="submit-btn" id="logoutBtn">Logout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
